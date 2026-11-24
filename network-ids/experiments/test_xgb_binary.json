@@ -1,0 +1,43 @@
+{
+  "model_type": "xgboost",
+  "task": "binary",
+  "n_features": 65,
+  "n_train_samples": 80,
+  "n_test_samples": 20,
+  "n_classes": 2,
+  "training_time_seconds": 0.383,
+  "accuracy": 0.6,
+  "precision_macro": 0.52381,
+  "recall_macro": 0.52381,
+  "f1_macro": 0.52381,
+  "f1_weighted": 0.6,
+  "classification_report": {
+    "0": {
+      "precision": 0.7142857142857143,
+      "recall": 0.7142857142857143,
+      "f1-score": 0.7142857142857143,
+      "support": 14.0
+    },
+    "1": {
+      "precision": 0.3333333333333333,
+      "recall": 0.3333333333333333,
+      "f1-score": 0.3333333333333333,
+      "support": 6.0
+    },
+    "accuracy": 0.6,
+    "macro avg": {
+      "precision": 0.5238095238095238,
+      "recall": 0.5238095238095238,
+      "f1-score": 0.5238095238095238,
+      "support": 20.0
+    },
+    "weighted avg": {
+      "precision": 0.6,
+      "recall": 0.6,
+      "f1-score": 0.6,
+      "support": 20.0
+    }
+  },
+  "model_name": "test_xgb_binary",
+  "model_path": "C:\\Users\\Khushal\\OneDrive\\Desktop\\network intrusion\\network-ids\\models\\test_xgb_binary.joblib"
+}

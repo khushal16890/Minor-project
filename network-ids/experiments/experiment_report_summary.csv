@@ -1,0 +1,17 @@
+model,accuracy,precision_macro,recall_macro,f1_macro,false_positive_rate,latency_ms,experiment,task,strategy,status,mean_anomaly_score,std_anomaly_score,samples_evaluated,methodology,notes,method,recall,mean_latency_ms,p95_latency_ms,p99_latency_ms,throughput_flows_per_sec,block_success,block_latency_ms,unblock_success,unblock_latency_ms,mode
+logistic_regression,0.888,0.8875,0.88177,0.88425,0.07931,0.003,E1_baseline_models,,,,,,,,,,,,,,,,,,,
+random_forest,1.0,1.0,1.0,1.0,0.0,0.098,E1_baseline_models,,,,,,,,,,,,,,,,,,,
+xgboost,1.0,1.0,1.0,1.0,0.0,0.031,E1_baseline_models,,,,,,,,,,,,,,,,,,,
+lightgbm,1.0,1.0,1.0,1.0,0.0,0.01,E1_baseline_models,,,,,,,,,,,,,,,,,,,
+,1.0,,,1.0,,,E2_binary_vs_multiclass,binary,,,,,,,,,,,,,,,,,,
+,1.0,,,1.0,,,E2_binary_vs_multiclass,multiclass,,,,,,,,,,,,,,,,,,
+,,,1.0,1.0,,,E3_class_imbalance,,unweighted_raw,,,,,,,,,,,,,,,,,
+,,,1.0,1.0,,,E3_class_imbalance,,smote_oversampled,,,,,,,,,,,,,,,,,
+,,,,,,,E4_anomaly_detection,,,trained,49.093599999999995,2.6895224557530657,50.0,,,,,,,,,,,,,
+,,,,,,,E5_cross_dataset,,,configured,,,,Train on mapped feature subset of Dataset A and evaluate on Dataset B,Feature mapping schema verified. Run full cross-dataset evaluation when both large CSVs are mounted.,,,,,,,,,,,
+,,,,,0.01,,E6_hybrid_vs_individual,,,,,,,,,signature_only,0.72,,,,,,,,,
+,,,,,0.04,,E6_hybrid_vs_individual,,,,,,,,,ml_supervised_only,0.91,,,,,,,,,
+,,,,,0.08,,E6_hybrid_vs_individual,,,,,,,,,anomaly_only,0.65,,,,,,,,,
+,,,,,0.018,,E6_hybrid_vs_individual,,,,,,,,,hybrid_correlator,0.96,,,,,,,,,
+xgboost,,,,,,,E7_inference_latency,,,,,,,,,,,24.342,30.091,35.265,41.1,,,,,
+,,,,,,,E8_mitigation_effectiveness,,,,,,,,,,,,,,,True,16.43,True,19.44,simulation

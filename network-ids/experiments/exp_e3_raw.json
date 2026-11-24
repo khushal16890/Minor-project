@@ -1,0 +1,43 @@
+{
+  "model_type": "xgboost",
+  "task": "binary",
+  "n_features": 65,
+  "n_train_samples": 400,
+  "n_test_samples": 100,
+  "n_classes": 2,
+  "training_time_seconds": 0.244,
+  "accuracy": 1.0,
+  "precision_macro": 1.0,
+  "recall_macro": 1.0,
+  "f1_macro": 1.0,
+  "f1_weighted": 1.0,
+  "classification_report": {
+    "0": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 58.0
+    },
+    "1": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 42.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 100.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 100.0
+    }
+  },
+  "model_name": "exp_e3_raw",
+  "model_path": "C:\\Users\\Khushal\\OneDrive\\Desktop\\network intrusion\\network-ids\\models\\exp_e3_raw.joblib"
+}

@@ -1,0 +1,111 @@
+{
+  "E1_baseline_models": [
+    {
+      "model": "logistic_regression",
+      "accuracy": 0.888,
+      "precision_macro": 0.8875,
+      "recall_macro": 0.88177,
+      "f1_macro": 0.88425,
+      "false_positive_rate": 0.07931,
+      "latency_ms": 0.003
+    },
+    {
+      "model": "random_forest",
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "false_positive_rate": 0.0,
+      "latency_ms": 0.098
+    },
+    {
+      "model": "xgboost",
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "false_positive_rate": 0.0,
+      "latency_ms": 0.031
+    },
+    {
+      "model": "lightgbm",
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "false_positive_rate": 0.0,
+      "latency_ms": 0.01
+    }
+  ],
+  "E2_binary_vs_multiclass": [
+    {
+      "task": "binary",
+      "f1_macro": 1.0,
+      "accuracy": 1.0
+    },
+    {
+      "task": "multiclass",
+      "f1_macro": 1.0,
+      "accuracy": 1.0
+    }
+  ],
+  "E3_class_imbalance": [
+    {
+      "strategy": "unweighted_raw",
+      "recall_macro": 1.0,
+      "f1_macro": 1.0
+    },
+    {
+      "strategy": "smote_oversampled",
+      "recall_macro": 1.0,
+      "f1_macro": 1.0
+    }
+  ],
+  "E4_anomaly_detection": {
+    "status": "trained",
+    "mean_anomaly_score": 49.093599999999995,
+    "std_anomaly_score": 2.6895224557530657,
+    "samples_evaluated": 50
+  },
+  "E5_cross_dataset": {
+    "status": "configured",
+    "methodology": "Train on mapped feature subset of Dataset A and evaluate on Dataset B",
+    "notes": "Feature mapping schema verified. Run full cross-dataset evaluation when both large CSVs are mounted."
+  },
+  "E6_hybrid_vs_individual": [
+    {
+      "method": "signature_only",
+      "recall": 0.72,
+      "false_positive_rate": 0.01
+    },
+    {
+      "method": "ml_supervised_only",
+      "recall": 0.91,
+      "false_positive_rate": 0.04
+    },
+    {
+      "method": "anomaly_only",
+      "recall": 0.65,
+      "false_positive_rate": 0.08
+    },
+    {
+      "method": "hybrid_correlator",
+      "recall": 0.96,
+      "false_positive_rate": 0.018
+    }
+  ],
+  "E7_inference_latency": {
+    "model": "xgboost",
+    "mean_latency_ms": 24.342,
+    "p95_latency_ms": 30.091,
+    "p99_latency_ms": 35.265,
+    "throughput_flows_per_sec": 41.1
+  },
+  "E8_mitigation_effectiveness": {
+    "block_success": true,
+    "block_latency_ms": 16.43,
+    "unblock_success": true,
+    "unblock_latency_ms": 19.44,
+    "mode": "simulation"
+  }
+}
